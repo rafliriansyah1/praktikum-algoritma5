@@ -1,0 +1,45 @@
+# -- coding: utf-8 --
+"""
+Created on Fri Oct 22 06:31:04 2021
+
+@author: LINSYVER
+NAMA : Rafli Riansyah 
+NIM : 064002100028
+
+"""
+print("S elamat Datang")
+print("umur 1 : gratis ")
+print("umur 12 kebawah : $ 14.00")
+print("umur 13 sampai 34 : $ 18.00")
+print("umur 35 sampai 66 : $ 23.00")
+
+input('Garungan Kebun Binatang!')
+
+while True:
+    umur = int(input('masukan umur : '))
+    bayar = True
+    if umur <= 2:
+        harga = 0
+        print('tiket anda gratis!')
+        bayar = False
+    elif umur >= 3 and umur <= 12:
+        harga = 14
+        print('tiket anda sebesar $',harga)
+    elif umur >=13 and umur < 65:
+        harga = 23
+        print('tiket anda sebesar $',harga)
+    else:
+        harga = 18
+        print('tiket anda sebesar $',harga)
+        
+    if bayar == True:
+        uang = int(input('masukkan uang anda : $ '))
+        if uang == harga:
+            print('duit anda mencukupi!')
+        elif uang < harga:
+            print('uang anda kurang!')
+        elif uang > harga:
+            uang -= harga
+            print('jumlah kembalian $',uang)        
+    break
+    
